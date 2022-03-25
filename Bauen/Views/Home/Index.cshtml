@@ -1,0 +1,308 @@
+﻿@model HomeViewModel
+
+<header id="home" class="header slider-fade" data-scroll-index="0">
+    <div class="owl-carousel owl-theme">
+
+        @foreach (Banner item in Model.Banners)
+        {
+            <div class="text-left item bg-img" data-overlay-dark="3" data-background="/img/slider/@item.Img">
+                <div class="v-middle caption mt-30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="o-hidden">
+                                    <h1>@item.Title</h1>
+                                    <p>
+                                        @item.Text
+                                    </p>
+                                    <div class="butn-light mt-30 mb-30">
+                                        <a href="@item.BtnLink" target="_blank"><span>@item.BtnText</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </div>
+</header>
+<!-- Content -->
+<!-- Lines -->
+<section class="content-lines-wrapper">
+    <div class="content-lines-inner">
+        <div class="content-lines"></div>
+    </div>
+</section>
+<!-- About -->
+<section id="about" class="about section-padding" data-scroll-index="1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
+                @Html.Raw(Model.HomeAboutSection.LeftHtml)
+            </div>
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="about-img">
+                    <div class="img"> <img src="/img/about/@Model.HomeAboutSection.Img" class="img-fluid" alt=""> </div>
+                    <div class="about-img-2 about-buro">@Model.HomeAboutSection.ImgName</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Projects -->
+<section id="projects" class="projects section-padding" data-scroll-index="2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Our <span>Projects</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme">
+                    @foreach (Project item in Model.Projects)
+                        {
+                            <div class="item">
+                                <div class="position-re o-hidden"> <img src="/img/projects/@item.Image"></div>
+                                <div class="con">
+                                    <h6><a href="/Projects/Info/@item.Id">@item.Title</a></h6>
+                                    <h5><a href="/Projects/Info/@item.Id">@item.Name</a></h5>
+                                    <div class="line"></div> <a href="/Projects/Info/@item.Id"><i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services -->
+<section id="services" class="services section-padding" data-scroll-index="3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Our <span>Services</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="item">
+                    <a href="architecture.html">
+                        <img src="img/icons/icon-1.png" alt="">
+                        <h5>Architecture</h5>
+                        <div class="line"></div>
+                        <p>Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.</p>
+                        <div class="numb">01</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="item">
+                    <a href="interior-design.html">
+                        <img src="img/icons/icon-2.png" alt="">
+                        <h5>Interior Design</h5>
+                        <div class="line"></div>
+                        <p>Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.</p>
+                        <div class="numb">02</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="item">
+                    <a href="urban-design.html">
+                        <img src="img/icons/icon-3.png" alt="">
+                        <h5>Urban Design</h5>
+                        <div class="line"></div>
+                        <p>Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.</p>
+                        <div class="numb">03</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog -->
+<section id="blog" class="bauen-blog section-padding" data-scroll-index="4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Current <span>News</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/slider/1.jpg" alt=""> </div>
+                        <div class="con">
+                            <span class="category">
+                                <a href="blog.html">Architecture </a> -  20.12.2021
+                            </span>
+                            <h5><a href="post.html">Modern Architectural Structures</a></h5>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/slider/2.jpg" alt=""> </div>
+                        <div class="con">
+                            <span class="category">
+                                <a href="blog.html">Interior</a> - 18.12.2021
+                            </span>
+                            <h5><a href="post.html">Modernism in Architecture</a></h5>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/slider/3.jpg" alt=""> </div>
+                        <div class="con">
+                            <span class="category">
+                                <a href="blog.html">Urban</a> - 16.12.2021
+                            </span>
+                            <h5><a href="post.html">Postmodern Architecture</a></h5>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/slider/4.jpg" alt=""> </div>
+                        <div class="con">
+                            <span class="category">
+                                <a href="blog.html">Planing</a> - 14.12.2021
+                            </span>
+                            <h5><a href="post.html">Modern Architecture Buildings</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact -->
+<section id="contact" class="section-padding" data-scroll-index="5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                <h2 class="section-title">Contact <span>Us</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <p>Our firm nisl sodales sit amet sapien idea placerat sodales orcite. Vivamus ne miss rhoncus felis bauen architecture.</p>
+                <p><b>VAT :</b> USA002323065B06</p>
+            </div>
+            <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <p><b>Phone :</b> +1 203-123-0606</p>
+                <p><b>Email :</b> architecture@bauen.com</p>
+                <p><b>Address :</b> 24 King St, Charleston, 29401 USA</p>
+            </div>
+            <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                <form method="post" class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="name" id="name" placeholder="Full Name">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required="">
+                    </div>
+                    <div class="col-md-12">
+                        <textarea name="message" id="message" cols="40" rows="3" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="butn-dark mt-15"><a href="#0"><span>Send</span></a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Promo video - Testiominals -->
+<section class="testimonials">
+    <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/banner2.jpg" data-overlay-dark="3">
+        <div class="container">
+            <div class="row">
+                <!-- Promo video -->
+                <div class="col-md-6">
+                    <div class="vid-area">
+                        <div class="vid-icon">
+                            <a class="play-button vid" href="https://youtu.be/RziCmLzpFNY">
+                                <svg class="circle-fill">
+                                    <circle cx="43" cy="43" r="39" stroke="#fff" stroke-width=".5"></circle>
+                                </svg>
+                                <svg class="circle-track">
+                                    <circle cx="43" cy="43" r="39" stroke="none" stroke-width="1" fill="none"></circle>
+                                </svg> <span class="polygon">
+                                    <i class="ti-control-play"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="cont mt-15 mb-30">
+                            <h5>View promo video</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testiominals -->
+                <div class="col-md-5 offset-md-1">
+                    <div class="testimonials-box animate-box" data-animate-effect="fadeInUp">
+                        <div class="head-box">
+                            <h4>What Client's Say?</h4>
+                        </div>
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <span class="quote"><img src="img/quot.png" alt=""></span>
+                                <p>Architect dapibus augue metus the nec feugiat erat hendrerit nec. Duis ve ante the lemon sanleo nec feugiat erat hendrerit necuis ve ante.</p>
+                                <div class="info">
+                                    <div class="author-img"> <img src="img/team/1.jpg" alt=""> </div>
+                                    <div class="cont">
+                                        <h6>Jason Brown</h6> <span>Crowne Plaza Owner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="quote">
+                                    <img src="img/quot.png" alt="">
+                                </span>
+                                <p>Interior dapibus augue metus the nec feugiat erat hendrerit nec. Duis ve ante the lemon sanleo nec feugiat erat hendrerit necuis ve ante.</p>
+                                <div class="info">
+                                    <div class="author-img"> <img src="img/team/2.jpg" alt=""> </div>
+                                    <div class="cont">
+                                        <h6>Emily White</h6> <span>Armada Owner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="quote">
+                                    <img src="img/quot.png" alt="">
+                                </span>
+                                <p>Urban dapibus augue metus the nec feugiat erat hendrerit nec. Duis ve ante the lemon sanleo nec feugiat erat hendrerit necuis ve ante.</p>
+                                <div class="info">
+                                    <div class="author-img"> <img src="img/team/4.jpg" alt=""> </div>
+                                    <div class="cont">
+                                        <h6>Jesica Smith</h6> <span>Alsa Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 owl-carousel owl-theme">
+                @foreach (Partner item in Model.Partners)
+                {
+                    <div class="clients-logo">
+                        <a href="#0"><img src="/img/clients/@item.Img"></a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+﻿@model UserDTO
+<div class="row">
+    <div class="col-md-8">
+        @if (Model.IsActive)
+        {
+            <h2 class="text-danger mb-3">Do you surely want to disable this User?</h2>
+        }
+        else
+        {
+            <h2 class="text-success mb-3">Do you surely want to Activate this User?</h2>
+        }
+        <h4>Id: <b>@Model.Id</b></h4>
+        <h4>Name: <b>@Model.FullName</b></h4>
+        <h4>Username: <b>@Model.UserName</b></h4>
+        <h4>Email: <b>@Model.Email</b></h4>
+        <h4>Role: <b>@Model.Role</b></h4>
+
+
+        @if (Model.IsActive)
+        {
+            <a asp-action="ChangeStatusConfirmed" asp-route-id="@Model.Id" class="btn btn-danger">Disable</a>
+        }
+        else
+        {
+            <a asp-action="ChangeStatusConfirmed" asp-route-id="@Model.Id" class="btn btn-success">Activate</a>
+        }
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿@model Project
+<div class="row">
+    <div class="col-md-8">
+        <h4>Name: <b>@Model.Name</b></h4>
+        <h4>Company: <b>@Model.Company</b></h4>
+        <h4>Location: <b>@Model.Location</b></h4>
+        <h4>Year: <b>@Model.Year</b></h4>
+        <h4>Title: <b>@Model.Title</b></h4>
+        <h4>DetailedText: <b>@Model.DetailedText</b></h4>
+
+        @foreach (ProjectImage item in Model.ProjectImages)
+        {
+            <img src="/img/projects/@item.Img" style="width:200px" class="rounded d-block mb-3" />
+
+        }
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

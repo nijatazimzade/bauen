@@ -1,0 +1,23 @@
+﻿@model UserDTO
+<div class="row">
+    <div class="col-md-8">
+        <h2 class="text-danger mb-3">Do you surely want to change the role of this User?</h2>
+        <h4>Id: <b>@Model.Id</b></h4>
+        <h4>Name: <b>@Model.FullName</b></h4>
+        <h4>Username: <b>@Model.UserName</b></h4>
+        <h4>Email: <b>@Model.Email</b></h4>
+        <h4>Role: <b>@Model.Role</b></h4>
+
+        <hr />
+        <form asp-action="ChangeRoleConfirmed" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            @foreach (string item in Model.Roles)
+            {
+                <input type="radio" name="role" value="@item" @(item==Model.Role?"checked":"")/>
+                <label class="mr-3">@item</label>
+            }
+            <button type="submit" class="btn btn-success">Save Changes</button>
+        </form>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

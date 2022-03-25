@@ -1,0 +1,13 @@
+﻿@model Project
+<div class="row">
+    <div class="col-md-8">
+        <h2 class="text-danger mb-3">Do you surely want to delete this Project?</h2>
+        @foreach (ProjectImage item in Model.ProjectImages)
+        {
+            <img src="/img/projects/@item.Img" style="width:200px" class="rounded d-block mb-3" />
+
+        }
+        <a asp-action="DeleteConfirmed" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

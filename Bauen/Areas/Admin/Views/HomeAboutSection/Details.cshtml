@@ -1,0 +1,9 @@
+﻿@model HomeAboutSection
+<div class="row">
+    <div class="col-md-8">
+        <p> @Model.LeftHtml </p>
+        <img src="/img/about/@Model.Img" style="width:200px" class="rounded d-block mb-3" />
+        <span>@Model.ImgName</span>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

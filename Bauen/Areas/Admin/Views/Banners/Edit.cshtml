@@ -1,0 +1,43 @@
+﻿@model Banner
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Edit Partner</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-12">
+                    <p>Current image:</p>
+                    <img src="~/img/slider/@Model.Img" style="width:200px" class="rounded d-block mb-3" />
+                </div>
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Title"></label>
+                    <input type="text" class="form-control" asp-for="Title">
+                    <span class="text-danger small" asp-validation-for="Title"></span>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <input type="hidden" asp-for="Img" />
+                    <label asp-for="Image"></label>
+                    <div class="custom-file">
+                        <input accept="image/*" class="custom-file-input" asp-for="Image">
+                        <label class="custom-file-label">
+                            Choose
+                            file...
+                        </label>
+                        <span class="text-danger small" asp-validation-for="Image"></span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <a asp-action="Index" class="btn btn-primary">Go Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}

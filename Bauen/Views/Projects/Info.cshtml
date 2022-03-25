@@ -1,0 +1,71 @@
+﻿@model Project
+<div class="content-wrapper">
+
+    <section class="content-lines-wrapper">
+        <div class="content-lines-inner">
+            <div class="content-lines"></div>
+        </div>
+    </section>
+    <section class="banner-header banner-img valign bg-img bg-fixed" data-overlay-darkgray="5"
+             data-background="/img/banner.jpg" style="background-image:url(/img/banner.jpg)">
+    </section>
+
+    <section class="section-padding2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title2">@Model.Name</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <p>@Model.DetailedText</p>
+                </div>
+                <div class="col-md-4">
+                    <p><b>Year : </b> @Model.Year</p>
+                    <p><b>Company : </b> @Model.Company</p>
+                    <p><b>Project Name : </b> @Model.Name</p>
+                    <p><b>Location : </b> @Model.Location</p>
+                </div>
+            </div>
+            <div class="row mt-30">
+                @foreach (ProjectImage item in Model.ProjectImages)
+                {
+                    <div class="col-md-6 gallery-item">
+                        <a href="~/img/slider/@item.Img" title="Architecture" class="img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="~/img/projects/@item.Img" class="img-fluid mx-auto d-block" alt="work-img"> </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section class="projects-prev-next">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-sm-flex align-items-center justify-content-between">
+                        <div class="projects-prev-next-left">
+                            <a href="@Model.Id"> <i class="ti-arrow-left"></i> Previous Project</a>
+                        </div>
+                        <a href="#"><i class="ti-layout-grid3-alt"></i></a>
+                        <div class="projects-prev-next-right">
+                            <a href="@Model.Id">Next Project <i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
