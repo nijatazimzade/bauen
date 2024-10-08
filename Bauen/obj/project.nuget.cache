@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bADnsiKwMY6lZiof078qjSMizR4OXj9iRbgEnKrlw2VjTbWoviXjqiv8c/w31TOyFRFOTchQJo3/h78F+M5Ziw==",
+  "dgSpecHash": "HLK7JFnn3a921PQAzivg6U70Uz3ef4CBsBQogrBxUvV4gAl2r2ZFVw7GbNq1CujuAUD2THamzowLSjRwkZt4QQ==",
   "success": true,
-  "projectFilePath": "C:\\Nicat\\codeacademy\\backend\\Bauen\\Bauen\\Bauen.csproj",
+  "projectFilePath": "C:\\nijatazimzade\\codeacademy\\backend\\Bauen\\Bauen\\Bauen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",
